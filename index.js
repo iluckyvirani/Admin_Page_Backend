@@ -12,7 +12,7 @@ app.use(cors())
 
 dotenv.config()
 mongoose.connect(process.env.MONGO_URI)
-  .then(() => app.listen(process.env.PORT, () => console.log('MongoDB connected')))
+  .then(() => app.listen(process.env.PORT||6010, () => console.log('MongoDB connected')))
   .catch((err) => console.error(err));
 
 
